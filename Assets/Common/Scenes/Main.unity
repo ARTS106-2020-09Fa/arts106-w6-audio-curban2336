@@ -1092,7 +1092,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 9124406137772101790, guid: bfa946c05bbab3c40bd71bc73bd8befa,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1f08cbc6e79621342a96dab61c474c35, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.462
   m_Pitch: 1
@@ -2477,7 +2477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842798dca5ba2ce4eaf36ac31844d7ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventClip: {fileID: 0}
+  eventClip: {fileID: 8300000, guid: 1f08cbc6e79621342a96dab61c474c35, type: 3}
 --- !u!54 &1388570230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2564,8 +2564,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388570228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.91, y: -2.79, z: -49.57}
-  m_LocalScale: {x: 18.797997, y: 13.994952, z: 6.87544}
+  m_LocalPosition: {x: 0.04, y: -2.79, z: -50.57}
+  m_LocalScale: {x: 5.235054, y: 13.994952, z: 5.1763625}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -2953,7 +2953,13 @@ MonoBehaviour:
   mainMusic: {fileID: 1337688924}
   auxMusic: {fileID: 857769505}
   ambSound: {fileID: 378235155}
-  eventMusic: {fileID: 0}
+  eventMusic: {fileID: 660139174}
+  eventSnap: {fileID: 8137944581741784706, guid: bfa946c05bbab3c40bd71bc73bd8befa,
+    type: 2}
+  idleSnapshot: {fileID: 24500006, guid: bfa946c05bbab3c40bd71bc73bd8befa, type: 2}
+  eventRunning: 0
+  auxIn: 1
+  currentAudioMixerSnapshot: {fileID: 0}
 --- !u!1001 &1725318448
 PrefabInstance:
   m_ObjectHideFlags: 0
