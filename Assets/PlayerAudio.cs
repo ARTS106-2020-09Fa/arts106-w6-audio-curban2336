@@ -31,7 +31,7 @@ public class PlayerAudio : MonoBehaviour
         {
             enemyNear = false;
         }
-        if (AudioManager.manager.eventRunning)
+        if (!AudioManager.manager.eventRunning)
         {
             if (enemyNear)
             {
