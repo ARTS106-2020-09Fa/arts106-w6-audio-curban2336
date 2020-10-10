@@ -8,6 +8,9 @@ TagManager:
   - Doorway
   - Enemy Zone
   - Ambience
+  - WoodFloor
+  - HardFloor
+  - GrassFloor
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,11 @@ public class PlayerAudio : MonoBehaviour
     public LayerMask enemyMask;
 
     bool enemyNear;
+
+    public AudioClip[] grassSteps;
+    public AudioClip[] woodSteps;
+    public AudioClip[] hardSteps;
+
     private void Update()
     {
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, 5f, transform.forward, 0f, enemyMask);
@@ -103,6 +108,31 @@ public class PlayerAudio : MonoBehaviour
         if (other.CompareTag("Ambience"))
         {
             ambIdleSnapshot.TransitionTo(0.5f);
+        }
+    }
+
+    public void Footsteps()
+    {
+        RaycastHit hit;
+        int r = Random.Range(0, 3);
+        Ray ray = new Ray(transform.position, -transform.up);
+        if(Physics.Raycast(ray, out hit, 1f))
+        {
+            switch (hit.transform.tag)
+            {
+                case "WoodFloor":
+                    audioS.PlayOneShot(woodSteps[r]);
+                    break;
+                case "HardFloor":
+                    audioS.PlayOneShot(hardSteps[r]);
+                    break;
+                case "GrassFloor":
+                    audioS.PlayOneShot(grassSteps[r]);
+                    break;
+                default:
+                    audioS.PlayOneShot(grassSteps[r]);
+                    break;
+            }
         }
     }
 }
